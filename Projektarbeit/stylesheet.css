@@ -1,0 +1,174 @@
+
+
+:root {
+  --dunkelblau: #004f9d;
+  --hellblau: #ffffff;
+  --weiss: #71a9f7;
+  --schwarz: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Comfortaa', cursive;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: var(--weiss);
+}
+
+header {
+  background-color: var(--dunkelblau);
+  color: #fff;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header_img{
+  background-image: url("tennis-g1395bda6d_1280.jpg");
+  min-height: 200px;
+  text-align: center;
+  line-height: 200px;
+  font-size: x-large;
+}
+
+
+
+#logo {
+  max-height: 40px;
+
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+main {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.content-blocks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.content-block {
+  background-color: var(--hellblau);
+  padding: 20px;
+}
+
+.sidebar {
+  background-color: var(--hellblau);
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+footer {
+  background-color: var(--dunkelblau);
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 200px;
+
+}
+
+
+
+
+/* Media Queries */
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+  .content-blocks {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    grid-column: 1 / span 1;
+  }
+}
+
+/* Medium screens */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .content-blocks {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .sidebar {
+    grid-column: 1 / span 1;
+  }
+}
+
+/* Large screens */
+.sidebar {
+  background-color: var(--hellblau);
+  padding: 20px;
+}
+
+/* Large screens */
+@media only screen and (min-width: 1025px) {
+  main {
+    grid-template-columns: 2fr 1fr; /* Change to 2fr and 1fr */
+  }
+
+  .sidebar {
+    grid-column: 2 / span 1;
+    flex-basis: calc(33.33% - 40px); /* Adjust flex-basis to one-third minus padding */
+  }
+}
+.contact-block{
+  margin: 20px;
+}
+.map {
+  padding: 20px;
+  flex: 1;
+  align-self: flex-end; /* Add align-self property */
+}
+
+/* Media Queries */
+
+/* Small and Medium screens */
+@media only screen and (max-width: 1024px) {
+  .contact-block {
+    flex-basis: 100%; /* Take full width */
+
+  }
+
+  .map {
+    flex-basis: 100%; /* Take full width */
+    margin-top: 20px; /* Add margin between blocks */
+  }
+}
